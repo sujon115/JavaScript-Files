@@ -1,6 +1,7 @@
-/* to create an alert by js , // to go next line without excuting the code inside chrome console = shift + enter*/
+// to go next line without excuting the code inside chrome console = shift + enter*/
 // two alerts, alert(function), (" inside this contain message or string"), ; ends the code snippet 
 
+/* to create an alert by js*/
 alert("Hey, "); 
 alert("welcome to our page"); 
 // this is valid too
@@ -8,6 +9,7 @@ window.alert("What's up?");
 
 // prompt gives user access to enter their information 
 prompt ( " Enter your name"); 
+// ===================================================================
 
 // different types of data types in JS= Numbers, string, boolean,   null, undefined, object, array, symbol
 
@@ -36,7 +38,7 @@ console.log(yourName);
 var gameLevel = 1
 gameLevel = 2; 
 gameLevel = 3; 
-alert( "Your level is currently: " + gameLevel); 
+alert( "Your level is currently: " + gameLevel); /* will return 3 */
 /* ============================================ */
 
 // change the function in a way that a become 8 and b value will be 3
@@ -56,7 +58,7 @@ function test() {
 // ======================================
 // variable naming rules 
 // can't name it var
-// can't begin with a nuber 
+// can't begin with a number 
 // No space
 // camel casing: first word should be small letter, and begining of the second word fist letter should be capital
 // it can't contain dash - sign 
@@ -67,7 +69,7 @@ function test() {
 // concatination 
 var message = "My name is "; 
 var name = "Sujon"; 
-alert(message + name); 
+alert(message + name); /* return My name is Sujon */
 
 // length 
 message.length; 
@@ -85,7 +87,7 @@ alert("You have written " + twitter.length + " characters,  you have " +
 // slice and dice 
 // in this example, this function allows to get rid of the additional text more then 140 characters; 
 var twitter2 = prompt("Write your tweet here: ");
-alert(twitter2.slice(0, 140)); 
+alert(twitter2.slice(0, 140)); /* slice(0,140) take all the character form positon 0 to 140 and get rid of the rest */
 // ==============================================
 
 // changin the twitter2 input to upper case 
@@ -98,7 +100,10 @@ alert(twitter2.slice(0, 140));
 var name= prompt("What is your name?")
 // below alert first take the first letter of the string and turn it to upper case;
 // + name.slice(1) add the rest of the message with the first letter except the fisrt letter itself
+// name.slice(0,1).toUpperCase() = turns the first letter to Capital
+// name.slice(1).toLowerCase() = turns the rest text into lower case, no matter whatever user enter
 alert(name.slice(0,1).toUpperCase()+ name.slice(1).toLowerCase());
+// ===========================================================
 
 
 
