@@ -2,57 +2,57 @@
 // two alerts, alert(function), (" inside this contain message or string"), ; ends the code snippet 
 
 /* to create an alert by js*/
-alert("Hey, "); 
-alert("welcome to our page"); 
+alert("Hey, ");
+alert("welcome to our page");
 // this is valid too
-window.alert("What's up?"); 
+window.alert("What's up?");
 
 // prompt gives user access to enter their information 
-prompt ( " Enter your name"); 
+prompt(" Enter your name");
 // ===================================================================
 
 // different types of data types in JS= Numbers, string, boolean,   null, undefined, object, array, symbol
 
 // number
-console.log(4+8);
+console.log(4 + 8);
 
 // to know the data types
-typeof(9); 
-typeof("Sujon"); 
-typeof(true); 
-console.log(typeof(9)); 
+typeof (9);
+typeof ("Sujon");
+typeof (true);
+console.log(typeof (9));
 
 
 // variables var=keyword, myName= Name of the variable, Sujon= value(anything after = is the value of the variables)
-var myName ="Sujon"; 
-console.log(myName); 
+var myName = "Sujon";
+console.log(myName);
 // using var as alert field information
-alert(myName); 
+alert(myName);
 
 // to save the information user enter we can use a prompt 
-var yourName= prompt("What is your name?");  
-alert("Welcome to my website " + yourName); 
-console.log(yourName); 
+var yourName = prompt("What is your name?");
+alert("Welcome to my website " + yourName);
+console.log(yourName);
 
 // game level var
 var gameLevel = 1
-gameLevel = 2; 
-gameLevel = 3; 
-alert( "Your level is currently: " + gameLevel); /* will return 3 */
+gameLevel = 2;
+gameLevel = 3;
+alert("Your level is currently: " + gameLevel); /* will return 3 */
 /* ============================================ */
 
 // change the function in a way that a become 8 and b value will be 3
 function test() {
-    var a = "3";
-    var b = "8";
-  
-    // to swap the value, we take help of a new empty var, which is c
-    var c = a;  /* a bucket contains water, I pour them down inside the empty c bucket */
-    a = b; /* now that a is empty, I pour down the b sands inside a bucket */
-    b= c; /* now that b is null, c water can go inside the b, by doing this I swap the value of the a and b */
+  var a = "3";
+  var b = "8";
 
-    console.log("a is " + a); /* a initial value was 3, but for above code snippet, it's now 8 */
-    console.log("b is " + b); /* b is now 3! */
+  // to swap the value, we take help of a new empty var, which is c
+  var c = a;  /* a bucket contains water, I pour them down inside the empty c bucket */
+  a = b; /* now that a is empty, I pour down the b sands inside a bucket */
+  b = c; /* now that b is null, c water can go inside the b, by doing this I swap the value of the a and b */
+
+  console.log("a is " + a); /* a initial value was 3, but for above code snippet, it's now 8 */
+  console.log("b is " + b); /* b is now 3! */
 }
 
 // ======================================
@@ -67,20 +67,20 @@ function test() {
 
 // sting rules and regulations 
 // concatination 
-var message = "My name is "; 
-var name = "Sujon"; 
+var message = "My name is ";
+var name = "Sujon";
 alert(message + name); /* return My name is Sujon */
 
 // length 
-message.length; 
+message.length;
 // ========================================
 
 // // twitter example telling user how many character left for them to write ; 
 // 140 character in total 
-var twitter = prompt("Write your tweet here: ");  
+var twitter = prompt("Write your tweet here: ");
 
-alert("You have written " + twitter.length + " characters,  you have " + 
-      (140 - twitter.length) + " charaters left"); 
+alert("You have written " + twitter.length + " characters,  you have " +
+  (140 - twitter.length) + " charaters left");
 
 // ==============================================
 
@@ -93,20 +93,181 @@ alert(twitter2.slice(0, 140)); /* slice(0,140) take all the character form posit
 // changin the twitter2 input to upper case 
 var twitter2 = prompt("Write your tweet here: ");
 twitter2 = twitter2.toUpperCase(); /* this allows me to change any information given from the user to upper case, by using toLowerCase() we can do the opposite  */
-alert(twitter2.slice(0, 140)); 
+alert(twitter2.slice(0, 140));
 // ==============================================
 
 // this variales change the first character of the string to upper case and rest of it to the lower case 
-var name= prompt("What is your name?")
+var name = prompt("What is your name?")
 // below alert first take the first letter of the string and turn it to upper case;
 // + name.slice(1) add the rest of the message with the first letter except the fisrt letter itself
 // name.slice(0,1).toUpperCase() = turns the first letter to Capital
 // name.slice(1).toLowerCase() = turns the rest text into lower case, no matter whatever user enter
-alert(name.slice(0,1).toUpperCase()+ name.slice(1).toLowerCase());
+alert(name.slice(0, 1).toUpperCase() + name.slice(1, name.length).toLowerCase());
 // ===========================================================
 
+// different solution for above example 
+var name = prompt("What is your name? ")
+var firstchar = name.slice(0, 1);
+var uppperCaseFirstChar = firstchar.toUpperCase();
+var resOfName = name.slice(1, name.length).toLowerCase();
+var capitaliseName = uppperCaseFirstChar + resOfName;
+alert("Hello " + capitaliseName);
+// ==========================================================
 
+// JS number ex
+// Modulo = % it returns the remainder
+// Dog age to human age formula, let say your dog humanAge = (dogAge -2) *4 +21
 
+var dogAge = prompt("What is your dog age? ")
+var humanAge = (dogAge - 2) * 4 + 21
+alert("Your dog human age is " + humanAge);
+// ===========================================================
 
+// increment and decrement 
+var x = 5;
+var y = 3
+// increment expression
+x++ =6;
+// + = add the new number with x
+x + = 2;
+// return 8
+x + = y;
 
+// decrement
+x-- = 4;
 
+// devided 
+var num = 12;
+// it takes 12 then devide it by 3; so ans is 4
+num / = 3;
+
+// modulo example, the remainder of this expression is 0
+var a = 16 % 4;
+
+// incrementation The post-increment operator ++ does indeed increment the value of x by 1. However, the actual increment occurs after the current value is assigne
+//  to the variable or used in an expression.
+var x = 3;
+var y = x++;
+y + = 1;
+
+// If I want x to be incremented immediately and then assign the updated value to y, I can use the pre-increment operator (++x) instead:
+var x = 3;
+var y = ++x;
+y += 1;
+// ========================================================================
+
+// Function
+// to replace anything all together, shortcut is ctrl + f
+function getMilk() {
+  console.log("Get some milk from the shop"); /* console.log is only for coder use */
+}
+// calling the function
+getMilk();
+// =======================================================================
+
+// Karel robot cross line solution, diagnolal line bottom to top
+function main() {
+  putBeeper();
+  twoMoves();
+  threeMoves();
+  twoMoves();
+  threeMoves();
+  twoMoves();
+  threeMoves();
+  twoMoves();
+  threeMoves();
+}
+
+function twoMoves() {
+  turnLeft();
+  move();
+}
+
+function threeMoves() {
+  turnRight();
+  move();
+  putBeeper();
+}
+
+//  Karel robot a chess board solution
+function main() {
+
+  StraightLine();
+  oneTurn();
+  threeTurns();
+  StraightLine();
+  oneTurn();
+  threeTurns();
+  StraightLine();
+}
+
+function threeTurns() {
+  turnRight();
+  move();
+  turnRight();
+}
+
+function StraightLine() {
+  putBeeper();
+  move();
+  move();
+  putBeeper();
+  move();
+  move();
+  putBeeper();
+}
+
+function oneTurn() {
+  turnLeft();
+  move();
+  turnLeft();
+  move();
+  putBeeper();
+  move();
+  move();
+  putBeeper();
+  move();
+}
+// =========================================================================
+// updated milk funcition 
+// money is the parameter of the getMilk function
+// 5 is the argument passed to the getMilk function
+function getMilk(money) {
+  // to round the figure we can user math.floor, 
+  // match.round; match.ceil; 
+  var bottles = Math.floor(money / 1.5);
+  console.log("Here is your " + bottles + " bottles of milk sir");
+}
+getMilk(5);
+// =========================================================================
+// life in weeks, days and month left function
+function lifeInWeeks(age) { 
+  var myDaysLeft = (90*365 - (age*365) ); 
+  var myWeeksLeft = (90*52 - (age*52)); 
+  var myMonthsLeft =(90*12 - (age*12)); 
+  console.log("You have " + myDaysLeft + " days, " + myWeeksLeft
+  + " weeks, " + "and " + myMonthsLeft + " months left."); 
+}
+  
+lifeInWeeks(24.4); 
+// =================================================================================
+// get milk function with change 
+// updated milk funcition 
+// money is the parameter of the getMilk function
+// 5 is the argument passed to the getMilk function
+function getMilk(money) {  
+  // to round the figure we can user math.floor, 
+  // match.round; match.ceil; 
+  var bottles = Math.floor(money / 1.5) ; 
+  console.log("Here is your " + bottles + " bottles of milk sir");
+  // this return function return the parent getMilk() function which in her is 1; 
+  return money % 1.5 ; 
+}
+
+// here this var holds the return value of getMilk function; 
+var change = getMilk(4); 
+// now the remainder or the return is the change of the rest of the cost
+console.log("And here is your " + change + "£ change master");
+// we can recall the function to double check
+getMilk(4); 
+// =================================================================================
